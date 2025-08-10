@@ -20,7 +20,7 @@ export default function YouTubeScraper() {
 
     const videoIdMatch = videoUrl.match(/(?:v=|shorts\/|youtu\.be\/)([\w-]+)/);
     const videoId = videoIdMatch ? videoIdMatch[1] : '';
-    const API_KEY = 'AIzaSyBFT3AmOVlQWrt2mRxFZozxirIrpcFdbjI';
+    const API_KEY = `${import.meta.env.VITE_API_KEY}`;
     const maxResults = parseInt(commentRange.split('-')[1], 10);
     let comments = [];
     let nextPageToken = '';
